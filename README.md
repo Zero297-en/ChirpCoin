@@ -1,2 +1,0 @@
-# ChirpCoin
-Super

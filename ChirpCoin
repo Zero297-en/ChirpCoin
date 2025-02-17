@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chirp Coin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .coin-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: gold;
+            background-image: url('bird_icon.png'); /* Rasmni qo'shish */
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .balance {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Chirp Coin</h1>
+    
+    <!-- Tanga (Qush rasmi) -->
+    <div class="coin-container" id="coin"></div>
+
+    <!-- Balans ko'rsatkich -->
+    <div class="balance">
+        Balans: <span id="balance">0</span> Coin
+    </div>
+
+    <script>
+        let balance = 0;
+
+        document.getElementById('coin').addEventListener('click', function() {
+            balance += 1;
+            document.getElementById('balance').textContent = balance + " Coin";
+        });
+    </script>
+
+</body>
+</html>
